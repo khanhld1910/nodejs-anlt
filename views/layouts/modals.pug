@@ -1,0 +1,69 @@
+form#login-form.modal
+	.modal-content
+		h4 Login    
+		.row
+			.input-field.col.s12
+				i.fa.fa-2x.fa-user.prefix(aria-hidden='true')
+				input#login-username.validate(type='text', name='username')
+				label(for='login-username') Username
+			.input-field.col.s12
+				i.fa.fa-2x.fa-key.prefix(aria-hidden='true')
+				input#login-password.validate(type='password', name='password')
+				label(for='login-password') Password
+			.input-field.col.s12       
+				span#login-message.right.hide Alert message
+			.input-field.col.s12        
+				a.modal-trigger.modal-action.modal-close(href='#register-form')
+					span Don't have an account?
+			.input-field.col.s12
+				button.btn.waves-effect.waves-light.right.red(type="submit")
+					| Submit
+					i.fa.fa-paper-plane.right(aria-hidden='true')
+
+form#register-form.modal
+	.modal-content
+		h4 Register    
+		.row
+			.input-field.col.s12
+				i.fa.fa-2x.fa-user.prefix(aria-hidden='true')
+				input#username.validate(type='text', name='username')
+				label(for='username') Username
+			.input-field.col.s12
+				i.fa.fa-2x.fa-key.prefix(aria-hidden='true')
+				input#password.validate(type='password', name='password')
+				label(for='password') Password
+			.input-field.col.s12
+				i.fa.fa-2x.fa-key.prefix(aria-hidden='true')
+				input#repassword.validate(type='password', name='repassword')
+				label(for='repassword') Retype Password
+			.input-field.col.s12    
+				a.modal-trigger.modal-action.modal-close(href='#login-form')
+					span Already have an account?
+			.input-field.col.s12
+				button.btn.waves-effect.waves-light.right.red(type="submit")
+					| Submit
+					i.fa.fa-paper-plane.right(aria-hidden='true')
+
+form#new-post.modal(method="post", enctype="multipart/form-data")
+	.modal-content
+		h4 New Post    
+		.row
+			.input-field.col.s12
+				input#post-title.validate(type='text', name='post-title', action='/add-post')
+				label(for='post-title') Title
+			.input-field.col.s12
+				textarea#post-content.materialize-textarea(name='post-content')
+				label(for='post-content') Content
+			.file-field.input-field.col.s12
+				.btn
+					span Image
+					input#post-image(type='file', accept="image/*")
+				.file-path-wrapper
+					input.file-path.validate(type='text')
+			#post-message.hide.input-field.col.s12.red-text
+				span Post message
+			.input-field.col.s12
+				button.btn.waves-effect.waves-light.right.red(type="submit")
+					| Post
+					i.fa.fa-paper-plane.right(aria-hidden='true')
+          

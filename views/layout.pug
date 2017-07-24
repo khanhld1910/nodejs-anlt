@@ -1,0 +1,15 @@
+doctype html
+html
+	include ./layouts/head.pug
+	body
+		include ./layouts/modals.pug  
+		include ./layouts/navbar.pug           
+		.container.z-depth-2
+			header        
+			main
+				block content
+			include ./layouts/footer.pug		
+		#{isLoggedIn}
+			if isLoggedIn
+				include ./layouts/fab.pug
+			

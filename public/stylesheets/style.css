@@ -1,0 +1,67 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: url(imgs/bg.png) center;
+  margin-bottom: 30px;
+}
+nav, main, footer .footer-container, footer .footer-copyright {
+  padding: 0 20px !important;
+  margin: 0;
+}
+main {
+  margin: 30px 0;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.container {
+  background-color: #FFF;
+}
+
+header {
+  background-image: url('imgs/banner2.jpg');
+  background-size: cover;
+  height: 400px;
+}
+
+
+nav, footer {
+  background-color: #D32F2F !important;
+}
+
+.brand-logo {
+  padding-right: 10px !important;
+}
+.brand-logo:hover {
+  background-color: rgba(0,0,0,0.1);
+}
+
+.block {
+  display: block;
+  width: 100%;
+}
+h1.title {
+  margin-top: 20px;
+}
+#login-form, #register-form {
+  width: 500px;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.post-item {
+  padding: 10px;
+}
+.del-opt {
+  margin-right: 0 !important;
+  cursor: pointer;
+}
+.card-action a {
+  cursor: pointer;
+  text-transform: capitalize !important;
+  font-weight: 700;
+}
+.card-action a:hover {
+  text-decoration: underline;
+}

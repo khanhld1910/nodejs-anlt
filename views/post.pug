@@ -1,0 +1,9 @@
+extends layout
+
+block content
+	h3.green-text.title= postTitle
+	.row
+		.col.s12.m6.post-item
+			img.responsive-img(src='../uploads/' + image)
+		.col.s12.m6.post-item
+			blockquote.grey-text.text-darken-2.flow-text #{content}

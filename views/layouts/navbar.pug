@@ -1,0 +1,25 @@
+mixin menulist
+  #{isLoggedIn}       
+    if !isLoggedIn
+      li
+        a.modal-trigger(href='#login-form')
+          i.fa.fa-sign-in(aria-hidden='true')
+          span &nbsp Login
+    else
+      li
+        span Hello 
+        span.yellow-text #{username}!
+      li
+        a(href='/logout')
+          i.fa.fa-sign-out(aria-hidden='true')
+          span &nbsp Logout
+.navbar-fixed.container
+  nav.container
+    div.nav-wrapper
+      a.brand-logo(href='/') Santa
+      a.button-collapse(href='#', data-activates='mobile-demo')
+        i.fa.fa-bars(ariahidden='false')    
+      ul#nav-mobile.right.hide-on-med-and-down
+        +menulist
+      ul#mobile-demo.side-nav
+        +menulist   

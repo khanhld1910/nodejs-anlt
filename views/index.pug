@@ -1,0 +1,21 @@
+extends layout
+
+block content
+	h3.red-text.title= title
+	.row
+		each val in postList
+			.col.s12.m6.l4.post-item
+				.card.small.hoverable
+					.card-image
+						img(src='uploads/'+ val.image)
+						span.card-title #{val.title}
+					.card-content
+						p.truncate #{val.content}
+					.card-action
+						a.left.green-text(href="/posts/"+ val.key)
+							i.fa.fa-link
+							span &nbsp View						 
+						if isLoggedIn
+							a.del-opt.right.red-text(href="/del/" + val.key)
+								i.fa.fa-trash
+								span &nbsp Delete
